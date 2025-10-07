@@ -34,7 +34,7 @@ public static function getUsia($tanggalLahir){
         $tanggalLahir = new DateTime($tanggalLahir);
         $today = new DateTime();
         $usia = $today->diff($tanggalLahir);
-        return $usia->y . 'Tahun'. $usia->m . 'Bulan';  
+        return $usia->y . ' Tahun '. $usia->m . ' Bulan ';  
     }catch(Throwable $th){
         return null;
 

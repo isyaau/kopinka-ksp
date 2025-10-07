@@ -30,6 +30,25 @@ export interface SharedData {
     [key: string]: unknown;
 }
 
+export interface Links {
+    url:string;
+    label:string;
+    active:boolean;
+}
+
+export interface Meta {
+    current_page:number;
+    from:number;
+    last_page:number;
+    next:string;
+    prev:string;
+    links: Links[];
+    path:string;
+    per_page:number;
+    to:number;
+    total:number;
+}
+
 export interface User {
     id: number;
     name: string;
@@ -40,4 +59,18 @@ export interface User {
     created_at: string;
     updated_at: string;
     [key: string]: unknown; // This allows for additional properties...
+}
+
+export interface Anggota {
+    id:number;
+    nomor_anggota:string;
+    nama_lengkap:string;
+    alamat:string;
+    nomor_telepon:string;
+    jenis_kelamin:'Laki-laki' | 'Perempuan';
+    tanggl_lahir:string;
+    pekerjaan:string;
+    nomor_ktp:string;
+    usia:string;
+
 }
